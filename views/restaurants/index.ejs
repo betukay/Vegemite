@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="container">    
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Vegemite</h1>
+            <p>Time for some clean eating!</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/restaurants/new">Add New Restuarant</a>
+            </p>
+        </div>
+    </header>
+    <h3>Most Popular Restuarants!</h3>
+        <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+            <% restaurants.forEach(function(restaurant){ %>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="thumbnail">
+                        <image src="<%= restaurant.image %>"> 
+                        <div class="caption">
+                            <h4><%= restaurant.name %></h4>
+                        </div>
+                        <p>
+                            <a href="/restaurants/<%= restaurant._id %>" class="btn btn-primary">More Info</a>
+                        </p>
+                     </div>
+                </div>
+            <% }) %>
+        </div>    
+</div>
+
+<% include ../partials/footer %>
