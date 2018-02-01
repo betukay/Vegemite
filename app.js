@@ -6,14 +6,14 @@ var express        = require("express"),
     passport       = require("passport"),
     LocalStrategy  = require("passport-local"),
     methodOverride = require("method-override"),
-    Restaurant     = require("./models/restaurant"),
+    Recipe         = require("./models/recipe"),
     Comment        = require("./models/comment"),
     User           = require("./models/user")
     // seedDB        = require("./seeds") // seed the database
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
-    restaurantRoutes = require("./routes/restaurants"),
+    recipeRoutes     = require("./routes/recipes"),
     indexRoutes      = require("./routes/index")
    
 
@@ -46,8 +46,8 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/restaurants", restaurantRoutes);
-app.use("/restaurants/:id/comments", commentRoutes);
+app.use("/recipes", recipeRoutes);
+app.use("/recipes/:id/comments", commentRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Vegemite has started...");

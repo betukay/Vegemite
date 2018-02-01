@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var restaurantSchema = new mongoose.Schema({
+var recipeSchema = new mongoose.Schema({
    name: String,
    price: String,
    image: String,
@@ -21,4 +21,4 @@ var restaurantSchema = new mongoose.Schema({
    
 });
 
-module.exports = mongoose.model("Restaurant", restaurantSchema);
+module.exports = mongoose.model("Recipe", recipeSchema);

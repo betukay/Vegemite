@@ -1,18 +1,18 @@
-var Restaurant = require("../models/restaurant");
+var Recipe = require("../models/recipe");
 var Comment = require("../models/comment");
 //all the middleware
 var middlewareObj ={};
 
-middlewareObj.checkRestaurantOwnership = function(req, res, next){
+middlewareObj.checkRecipeOwnership = function(req, res, next){
      //is user logged in
     if(req.isAuthenticated()){
-        Restaurant.findById(req.params.id, function(err, foundRestaurant){
-           if(err || !foundRestaurant){
-               req.flash("error", "Restaurant not found.")
+        Recipe.findById(req.params.id, function(err, foundRecipe){
+           if(err || !foundRecipe){
+               req.flash("error", "Recipe not found.")
                res.redirect("back");
            } else {
                 //does user own campground
-                if(foundRestaurant.author.id.equals(req.user._id)){
+                if(foundRecipe.author.id.equals(req.user._id)){
                     next();          
                 } else {
                     req.flash("error", "User permission denied.")

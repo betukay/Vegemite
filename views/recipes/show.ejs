@@ -11,17 +11,17 @@
         </div>
         <div class="col-md-9">
             <div class ="thumbnail">
-                <img class ="image-responsive" src="<%= restaurant.image %>">
+                <img class ="image-responsive" src="<%= recipe.image %>">
                 <div class="caption-full">
-                    <h4 class="pull-right">Avgerage Price: $<%= restaurant.price %></h4>
-                    <h4><a><%= restaurant.name %></a></h4>
-                    <p><%= restaurant.description %></p>
+                    <h4 class="pull-right">Avgerage Price: $<%= recipe.price %></h4>
+                    <h4><a><%= recipe.name %></a></h4>
+                    <p><%= recipe.description %></p>
                     <p>
-                        <em>Submitted by <%= restaurant.author.username %></em>
+                        <em>Submitted by <%= recipe.author.username %></em>
                     </p>
-                    <% if(currentUser && restaurant.author.id.equals(currentUser._id)){ %>
-                        <a class="btn btn-xs btn-warning" href="/restaurants/<%= restaurant._id %>/edit">Edit</a>
-                        <form class="delete-form" action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST">
+                    <% if(currentUser && recipe.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-xs btn-warning" href="/recipes/<%= recipe._id %>/edit">Edit</a>
+                        <form class="delete-form" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
                         <button class="btn btn-xs btn-danger">Delete</button>
                         </form>
                     <% } %>
@@ -30,11 +30,11 @@
             <div class="well">
                 <div class="text-right">
                     <p class="btn btn-success">
-                        <a href="/restaurants/<%= restaurant._id %>/comments/new">Add new Comment</a>
+                        <a href="/recipes/<%= recipe._id %>/comments/new">Add new Comment</a>
                     </p>
                 </div>
                 <hr>
-                <% restaurant.comments.forEach(function(comment){ %>
+                <% recipe.comments.forEach(function(comment){ %>
                     <div class="row">
                         <div class="col-md-12">
                             <strong><%= comment.author.username %></strong>
@@ -44,10 +44,10 @@
                             </p>
                         <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
                             <a class="btn btn-xs btn-warning" 
-                                href="/restaurants/<%= restaurant._id %>/comments/<%= comment._id %>/edit">
+                                href="/recipes/<%= recipe._id %>/comments/<%= comment._id %>/edit">
                                 Edit
                             </a>
-                            <form class="delete-form" action="/restaurants/<%= restaurant._id %>/comments/<%= comment._id %>?_method=delete" method="POST">
+                            <form class="delete-form" action="/recipes/<%= recipe._id %>/comments/<%= comment._id %>?_method=delete" method="POST">
                                 <input type="submit" class="btn btn-xs btn-danger" value="Delete">
                             </form>
                         <% } %>
