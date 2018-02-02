@@ -2,6 +2,15 @@
     display: inline;
 }
 
+.form-box {
+    width: 30%; 
+    margin: 40px auto;
+}
+
+.form-title {
+    text-align: center;
+}
+
 .thumbnail {
     padding: 0;
 }

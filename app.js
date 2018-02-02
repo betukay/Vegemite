@@ -1,5 +1,7 @@
 var express        = require("express"),
     app            = express(),
+    path           = require("path"),
+    favicon        = require('serve-favicon'),
     bodyParser     = require("express"),
     mongoose       = require("mongoose"),
     flash          = require("connect-flash"),
@@ -18,9 +20,10 @@ var commentRoutes    = require("./routes/comments"),
    
 
 mongoose.connect("mongodb://localhost/vegemite");
+app.use(express.static(__dirname + "/public"));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB();
