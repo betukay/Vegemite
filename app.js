@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(flash());
+app.locals.moment = require("moment");
 // seedDB();
 
 //PASSPORT CONFIGURATION
