@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express        = require("express"),
     app            = express(),
     path           = require("path"),
@@ -18,7 +20,6 @@ var commentRoutes    = require("./routes/comments"),
     recipeRoutes     = require("./routes/recipes"),
     indexRoutes      = require("./routes/index")
    
-
 mongoose.connect("mongodb://localhost/vegemite");
 app.use(express.static(__dirname + "/public"));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
@@ -48,6 +49,8 @@ app.use(function(req, res, next){
    res.locals.success = req.flash("success");
    next();
 });
+
+console.log(process.env.CLOUDINARY_API_KEY);
 
 app.use("/", indexRoutes);
 app.use("/recipes", recipeRoutes);

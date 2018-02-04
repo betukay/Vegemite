@@ -1,3 +1,7 @@
+div .well {
+    margin-bottom: 40px;
+}
+
 .delete-form {
     display: inline;
 }
@@ -22,3 +26,18 @@
 .thumbnail .caption-full {
     padding: 10px;
 }
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#eee;
+}
+
+#txtbox
+    {
+     font-size:11pt;
+     height:200px;
+    }
