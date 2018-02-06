@@ -3,10 +3,19 @@
 <div class="container">    
     <header class="jumbotron">
         <div class="container">
-            <h1>Vegemite</h1>
-            <p>Time for some clean eating!</p>
+            <h1>Welcome to Vegemite!</h1>
+            <p>Now it's time for some clean eating.</p>
             <p>
                 <a class="btn btn-primary btn-lg" href="/recipes/new">Add New Recipe</a>
+            </p>
+            <hr>
+            <p>
+                <form action="/recipes" method="GET" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="search" placeholder="Recipe search..." class="form-control">
+                        <input type="submit" value="search" class="btn btn-default">
+                    </div>
+                </form>
             </p>
         </div>
     </header>

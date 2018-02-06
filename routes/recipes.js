@@ -27,13 +27,24 @@ cloudinary.config({
 
 //INDEX - show all recipes
 router.get("/", function(req, res){
-    Recipe.find({}, function(err, AllRecipes){
-        if(err){
-            console.log(err);
-        } else {
-            res.render("recipes/index", {recipes: AllRecipes});
-        }
-    });
+    if(req.query.search){
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+        Recipe.find({name: regex}, function(err, AllRecipes){
+            if(err){
+                console.log(err);
+            } else {
+                res.render("recipes/index", {recipes: AllRecipes});
+            }
+        });
+    } else {
+        Recipe.find({}, function(err, AllRecipes){
+            if(err){
+                console.log(err);
+            } else {
+                res.render("recipes/index", {recipes: AllRecipes});
+            }
+        });
+    }
 });
 
 
@@ -104,5 +115,8 @@ router.delete("/:id", middleware.checkRecipeOwnership, function(req, res){
    });
 });
 
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 module.exports = router;
