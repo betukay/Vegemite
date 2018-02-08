@@ -50,8 +50,6 @@ app.use(function(req, res, next){
    next();
 });
 
-console.log(process.env.CLOUDINARY_API_KEY);
-
 app.use("/", indexRoutes);
 app.use("/recipes", recipeRoutes);
 app.use("/recipes/:id/comments", commentRoutes);
