@@ -20,7 +20,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
    Recipe.findById(req.params.id, function(err, recipe){
        if(err){
            console.log(err);
-           res.redirect("/recipe");
+           res.redirect("/recipes");
        } else {
           Comment.create(req.body.comment, function(err, comment){
               if(err){
@@ -35,7 +35,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                   recipe.save();
                   console.log(comment);
                   req.flash("success", "New comment has been successfully added.")
-                  res.redirect('/recipe/'+ recipe._id);
+                  res.redirect('/recipes/'+ recipe._id);
               }
           });
        }

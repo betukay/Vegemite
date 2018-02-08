@@ -18,7 +18,7 @@
                 <img class ="image-responsive" src="<%= recipe.image %>">
                 <div class="caption-full">
                     <h4><a><%= recipe.name %></a></h4>
-                    <p><%= recipe.description %></p>
+                    <p id="indenter"><%= recipe.description %></p>
                     <p>
                         <em>Submitted by <%= recipe.author.username %>, <%= moment(recipe.createdAt).fromNow() %></em>
                     </p>

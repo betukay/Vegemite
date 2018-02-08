@@ -32,12 +32,28 @@ div .well {
 }
 
 #footer {
-   position:fixed;
    left:0px;
    bottom:0px;
+   margin-top: 50px;
    height:30px;
    width:100%;
    background:#eee;
+   
+   
+}#footlog {
+   left:0px;
+   bottom:0px;
+   margin-top: 50px;
+   position: absolute;
+   height:30px;
+   width:100%;
+   background:#eee;
+}
+
+
+
+#indenter {
+    white-space: pre-line;
 }
 
 #nav-icon {
@@ -50,5 +66,6 @@ div .well {
 #txtbox
     {
      font-size:11pt;
-     height:200px;
+     height:250px;
+     width:350px;
     }
