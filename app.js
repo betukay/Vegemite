@@ -5,6 +5,7 @@ var express        = require("express"),
     path           = require("path"),
     favicon        = require('serve-favicon'),
     bodyParser     = require("express"),
+    moment         = require('moment'),
     mongoose       = require("mongoose"),
     flash          = require("connect-flash"),
     passport       = require("passport"),
@@ -27,7 +28,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(flash());
-app.locals.moment = require("moment");
+moment().format();
 // seedDB();
 
 //PASSPORT CONFIGURATION
