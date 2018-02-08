@@ -21,7 +21,6 @@ var commentRoutes    = require("./routes/comments"),
     recipeRoutes     = require("./routes/recipes"),
     indexRoutes      = require("./routes/index")
    
-
    
 mongoose.connect(process.env.DATABASEURL);
 app.use(express.static(__dirname + "/public"));
