@@ -14,7 +14,6 @@ var express        = require("express"),
     Recipe         = require("./models/recipe"),
     Comment        = require("./models/comment"),
     User           = require("./models/user")
-    // seedDB        = require("./seeds") // seed the database
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
@@ -22,7 +21,7 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
    
    
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL || "mongodb://localhost/vegemite");
 app.use(express.static(__dirname + "/public"));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(bodyParser.urlencoded({extended: true}));
@@ -55,6 +54,8 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes);
 app.use("/recipes", recipeRoutes);
 app.use("/recipes/:id/comments", commentRoutes);
+
+console.log("process.env.DATABASEURL");
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Vegemite has started...");
