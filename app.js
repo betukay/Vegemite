@@ -20,8 +20,8 @@ var commentRoutes    = require("./routes/comments"),
     recipeRoutes     = require("./routes/recipes"),
     indexRoutes      = require("./routes/index")
    
-   
-mongoose.connect(process.env.DATABASEURL || "mongodb://localhost/vegemite");
+var url = process.env.DATABASEURL || "mongodb://localhost/vegemite";
+mongoose.connect(url);
 app.use(express.static(__dirname + "/public"));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(bodyParser.urlencoded({extended: true}));
