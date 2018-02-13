@@ -1,3 +1,12 @@
+a, body #footer, .navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #F7882F;
+    border-color: #F7C331;
+}
+
 .delete-form {
     display: inline;
 }
@@ -9,6 +18,18 @@
 
 .form-title {
     text-align: center;
+}
+
+.jumbotron, body .thumbnail {
+    background-color: #DCC7AA;
+}
+
+.navbar-default {
+    background-color: #6B7A8F;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
 }
 
 .thumbnail {
@@ -37,7 +58,7 @@ div .well {
    margin-top: 50px;
    height:30px;
    width:100%;
-   background:#eee;
+   background:#6B7A8F;
    
    
 }#footlog {
@@ -47,7 +68,7 @@ div .well {
    position: absolute;
    height:30px;
    width:100%;
-   background:#eee;
+   background:#6B7A8F;
 }
 
 
