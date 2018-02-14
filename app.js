@@ -55,7 +55,6 @@ app.use("/", indexRoutes);
 app.use("/recipes", recipeRoutes);
 app.use("/recipes/:id/comments", commentRoutes);
 
-console.log("process.env.DATABASEURL");
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Vegemite has started...");
