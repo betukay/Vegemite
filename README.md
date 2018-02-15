@@ -2,7 +2,7 @@
 
 Vegemite is a full stack Javascript application that enables users to share vegetarian recipes and leave comments. Contributing to the app requires user authentication and only authorized users may delete their own content. 
 
-## Getting Started
+## Deployment
 
 After all JSON depenencies are installed, this app will need an image storage management system to like [Cloudinary](https://cloudinary.com/) to handle user uploaded images and a database platform like [mLab](https://mlab.com/) for deployment.
 
