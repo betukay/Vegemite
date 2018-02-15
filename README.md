@@ -16,5 +16,5 @@ App deployed on Heroku at: https://gentle-escarpment-23791.herokuapp.com/
 * [Express](https://expressjs.com/) - web application framework for Node.js
 * [Bootstrap](https://getbootstrap.com/) - front-end library
 * [Passport](http://www.passportjs.org/) - authentication middleware
-* [MongoDB](https://www.mongodb.com/) - the database used
+* [MongoDB](https://www.mongodb.com/) - back-end database used
 
