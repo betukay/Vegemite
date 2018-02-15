@@ -8,10 +8,9 @@ App deployed on Heroku at: https://gentle-escarpment-23791.herokuapp.com/
 
 ## Built With
 
-* [Node JS] - server-side scripting 
-* [Express] - web application framework for Node.js
+* [Node JS](https://nodejs.org/en/) - server-side scripting 
+* [Express](https://expressjs.com/) - web application framework for Node.js
 * [Bootstrap](https://getbootstrap.com/) - front-end library
-* [Passport] - 
-* [MongoDB] - the database used
-
+* [Passport](http://www.passportjs.org/) - authentication middleware
+* [MongoDB](https://www.mongodb.com/) - the database used
 
