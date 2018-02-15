@@ -1,8 +1,17 @@
 # Vegemite
-Vegemite, a vegetarian recipe app.
 
-Full Stack JavaScript App
+Vegemite is a full stack Javascript application that enables users to share vegetarian recipes and leave comments. Contributing to the app requires user authentication and only authorized users may delete their own content. 
 
-Built with: Node JS, Express, EJS, Bootstrap, & Passport
+## Getting Started
 
 App deployed on Heroku at: https://gentle-escarpment-23791.herokuapp.com/
+
+## Built With
+
+* [Node JS] - server-side scripting 
+* [Express] - web application framework for Node.js
+* [Bootstrap](https://getbootstrap.com/) - front-end library
+* [Passport] - 
+* [MongoDB] - the database used
+
+
