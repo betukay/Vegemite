@@ -42,22 +42,22 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(../images/spaghetti.jpg) 
+  background-image: url(../images/spaghetti-min.jpg) 
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(../images/tacos.jpg);
+  background-image: url(../images/tacos-min.jpg);
   animation-delay: 5s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(../images/mushrooms.jpg);
+  background-image: url(../images/mushrooms-min.jpg);
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(../images/soup.jpg);
+  background-image: url(../images/soup-min.jpg);
   animation-delay: 15s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(../images/cress.jpg);
+  background-image: url(../images/cress-min.jpg);
   animation-delay: 20s; 
 }
 
