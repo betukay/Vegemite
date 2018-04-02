@@ -2,11 +2,13 @@
 
 Vegemite is a full stack Javascript application that enables users to share vegetarian recipes and comment on their experiences. User authentication is required to add and/or update content. 
 
-
+<img src="public/images/image1.png">
 
 ## Live Demo
 
 App deployed on Heroku at: https://gentle-escarpment-23791.herokuapp.com/
+
+<img src="public/images/image2.png">
 
 ## Built With
 
@@ -17,9 +19,13 @@ App deployed on Heroku at: https://gentle-escarpment-23791.herokuapp.com/
 * [MongoDB](https://www.mongodb.com/) - back-end database used
 * [Cloudinary](https://cloudinary.com/) - user image storage management system
 
+<img src="public/images/image3.png">
+
 ## Usage
 
 After signing up, the use can upload new recipes and comment on other users activity. Through user authorization, they can only delete their own content. 
+
+<img src="public/images/image4.png">
 
 ## Contributing
 
