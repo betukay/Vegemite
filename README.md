@@ -19,6 +19,8 @@ App deployed on Heroku at: https://gentle-escarpment-23791.herokuapp.com/
 
 ## Usage
 
+After signing up, the use can upload new recipes and comment on other users activity. Through user authorization, they can only delete their own content. 
+
 ## Contributing
 
 If you think you found a bug, please submit a new issue in the [issue tracker](https://github.com/betukay/Vegemite/issues). Try to be as detailed as possible so we can improve your user experience. 
